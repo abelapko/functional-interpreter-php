@@ -14,4 +14,5 @@ services:
       - .:/app
     working_dir: /app
     environment:
+      XDEBUG_MODE: ${XDEBUG_MODE}
       XDEBUG_SESSION: ${XDEBUG_SESSION}
