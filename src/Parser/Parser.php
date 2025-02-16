@@ -31,7 +31,7 @@ class Parser
         $tokens = new CommonTokenStream($lexer);
         $parser = new FunctionalLangParser($tokens);
 
-        // Подключаем обработчик ошибок ANTLR
+        // Connect the ANTLR error handler
         $parser->removeErrorListeners();
         $parser->addErrorListener(new AntlrErrorListener());
 
