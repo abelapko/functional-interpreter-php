@@ -1,0 +1,8 @@
+(bk.action.string.JsonEncode, 
+    (bk.action.map.Make, 
+        (bk.action.array.Make, "numbers"), 
+        (bk.action.array.Make, 
+            (bk.action.array.Make, 1, 2, 3, 4, 5)
+        )
+    )
+)

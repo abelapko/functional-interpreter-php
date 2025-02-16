@@ -1,0 +1,17 @@
+(bk.action.string.JsonEncode, 
+    (bk.action.map.Make, 
+        (bk.action.array.Make, "user", "data"), 
+        (bk.action.array.Make, 
+            (bk.action.map.Make, 
+                (bk.action.array.Make, "name", "age", "active"), 
+                (bk.action.array.Make, "Bob", 25, false)
+            ),
+            (bk.action.map.Make, 
+                (bk.action.array.Make, "scores"), 
+                (bk.action.array.Make, 
+                    (bk.action.array.Make, 95, 88, 76, 100)
+                )
+            )
+        )
+    )
+)
