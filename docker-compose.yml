@@ -1,0 +1,16 @@
+services:
+  antlr:
+    image: alvarofpp/antlr4
+    volumes:
+      - .:/app
+    working_dir: /app
+
+  cli-php:
+    build: 
+      context: docker
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      XDEBUG_MODE: ${XDEBUG_MODE}
+      XDEBUG_SESSION: ${XDEBUG_SESSION}
