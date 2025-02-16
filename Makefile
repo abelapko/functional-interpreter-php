@@ -1,7 +1,20 @@
+MAKEFLAGS += --no-print-directory
 CLI_ARGS ?= bash
 
 init:
+	$(MAKE) set-env
+	$(MAKE) build
+	$(MAKE) install-php-packages
 	$(MAKE) generate-parser
+
+install-php-packages:
+	$(MAKE) cli CLI_ARGS="composer install"	
+
+set-env:
+	cp .env.dev .env
+
+build:
+	docker-compose build
 
 cli:
 	docker-compose run --rm cli-php $(CLI_ARGS)
@@ -14,3 +27,9 @@ parse:
 
 interpret:
 	$(MAKE) cli CLI_ARGS="php interpreter.php program.txt world"
+
+test:
+	$(MAKE) cli CLI_ARGS="composer run test"
+
+format:
+	$(MAKE) cli CLI_ARGS="composer run cs-fix"
