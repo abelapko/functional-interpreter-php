@@ -49,14 +49,7 @@ make init
 
 ### Using the Interpreter
 
-Fast run interpreter:
-```sh
-make interpret
-```
-
-Replace [program.txt](/program.txt) with your script file.
-
-Or you can attach to container CLI, and manually run interpreter:
+Attach to container CLI, and run interpreter:
 ```sh
 make cli
 ```
@@ -71,7 +64,7 @@ php interpreter.php program.txt world
 
 ### Using the Parser
 
-To use the parser manually:
+To use the parser:
 
 ```sh
 make cli
