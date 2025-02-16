@@ -1,0 +1,39 @@
+{
+    "function": "bk.action.string.JsonEncode",
+    "args": [
+        {
+            "function": "bk.action.map.Make",
+            "args": [
+                {
+                    "function": "bk.action.array.Make",
+                    "args": [
+                        {
+                            "constant": "\"message\""
+                        }
+                    ]
+                },
+                {
+                    "function": "bk.action.array.Make",
+                    "args": [
+                        {
+                            "function": "bk.action.string.Concat",
+                            "args": [
+                                {
+                                    "constant": "\"Hello, \""
+                                },
+                                {
+                                    "function": "bk.action.core.GetArg",
+                                    "args": [
+                                        {
+                                            "constant": "0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
