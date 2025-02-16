@@ -96,6 +96,6 @@ This uses **[PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)** to au
 
 ## Future Improvements
 
-- Add caching on for Parser layer
+- Add caching for Parser layer
 - Add performance test and logs
 - Integrate [PHPStan](https://phpstan.org/)
