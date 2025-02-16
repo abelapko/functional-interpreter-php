@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   antlr:
     image: alvarofpp/antlr4
