@@ -23,7 +23,7 @@ class AstBuilder extends FunctionalLangBaseListener
 
         $funcName = $ctx->IDENTIFIER()->getText();
         $args = $ctx->parameters() ? array_map(
-            fn($expr) => $this->processExpression($expr),
+            fn ($expr) => $this->processExpression($expr),
             $ctx->parameters()->expression()
         ) : [];
 
